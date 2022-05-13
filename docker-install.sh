@@ -2,6 +2,7 @@ set -ex
 
 apt-get update -q
 apt-get install -y gnupg wget
+apt-get -y --no-install-recommends install wireguard
 
 if [ "${MONGODB_VERSION}" != "no" ]; then
     wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
